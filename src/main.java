@@ -1,13 +1,23 @@
+import java.util.Scanner;
+
 public class main {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.println("enter number of vertices: ");
+        int vertices = sc.nextInt();
 
-        Graph graph = new Graph(5);
+        Graph graph = new Graph(vertices);
+        System.out.println("enter number of edges: ");
+        int edges = sc.nextInt();
 
-        graph.addedge(0, 1);
-        graph.addedge(0, 2);
-        graph.addedge(1, 3);
-        graph.addedge(2, 4);
+        System.out.println("enter edges (source and destination ) ");
+
+        for(int i =0;i<edges;i++){
+            int source = sc.nextInt();
+            int destination=sc.nextInt();
+            graph.addedge(source, destination);
+        }
 
         System.out.println("BFS Traversal:");
         BFS.traverse(graph, 0);
