@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Graph {
     private int vertices;
-    private LinkedList<Integer>adjList[];
+    private LinkedList<edge>adjList[];
 
         Graph(int vertices){
             this.vertices = vertices;
@@ -13,13 +13,15 @@ public class Graph {
             }
     }
 
-        void addedge (int start, int destination){
-            adjList[start].add(destination);
-            adjList[destination].add(start);
+        void addedge (int start, int destination,int weight){
+            adjList[start].add(new edge(destination,weight));
+            adjList[destination].add(new edge (start,weight));
         }
-        LinkedList<Integer>[] getadjlist(){
+
+        LinkedList<edge>[] getadjlist(){
              return adjList;
         }
+        
         
         int getVertices(){
             return vertices;

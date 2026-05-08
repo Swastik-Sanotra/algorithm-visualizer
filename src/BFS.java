@@ -14,7 +14,8 @@ public class BFS {
             int digit = queue.poll();
             System.out.println(digit+" ");
 
-            for (int neighbour : graph.getadjlist()[digit]){
+            for (edge Edge : graph.getadjlist()[digit]){
+                int neighbour = Edge.destination;
                 if (!visited[neighbour]){
                     visited[neighbour]=true;
                     queue.add(neighbour);

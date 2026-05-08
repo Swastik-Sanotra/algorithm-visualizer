@@ -11,12 +11,13 @@ public class main {
         System.out.println("enter number of edges: ");
         int edges = sc.nextInt();
 
-        System.out.println("enter edges (source and destination ) ");
+        System.out.println("enter edges (source destination and weight ) ");
 
         for(int i =0;i<edges;i++){
             int source = sc.nextInt();
             int destination=sc.nextInt();
-            graph.addedge(source, destination);
+            int weight = sc.nextInt();
+            graph.addedge(source, destination,weight);
         }
 
         System.out.println("BFS Traversal:");
