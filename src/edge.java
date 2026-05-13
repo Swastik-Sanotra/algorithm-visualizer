@@ -1,8 +1,9 @@
-public class edge {
+public class Edge {
     int destination;
     int weight;
     
-    edge (int desti,int weight){
+    
+    Edge (int destination,int weight){
         this.destination=destination;
         this.weight=weight;
     }

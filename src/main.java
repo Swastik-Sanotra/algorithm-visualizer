@@ -30,5 +30,8 @@ public class main {
         boolean[] visited = new boolean[graph.getVertices()];
 
         DFS.traverse(graph, 0, visited);
+
+        Dijkstra .shortestpath(graph,0);
+        
     }
 }
